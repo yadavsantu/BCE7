@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">BCE7</string>
+    <string name="first_text">This is my Application</string>
+    <string name="second_text">This is subtitle</string>
+    <string name="button1">Click Me</string>
+    <string name="placeholder">Enter text here</string>
+    <string name="button2">Apply</string>
+    <string name="third_text">Please apply</string>
+    <string name="name_text">My Name is</string>
+    <string name="hint1">Enter your name</string>
+    <string name="button3">OK!</string>
+    <string name="signUp">Sign Up</string>
+    <string name="imageDescription">App Logo</string>
+    <string name="title">Smart Invoice - Sign Up</string>
+    <string name="fName">First Name</string>
+    <string name="lName">Last Name</string>
+    <string name="email">Email</string>
+    <string name="Password">Password</string>
+    <string name="confirmPassword">Confirm Password</string>
+    <string name="redirect">Already have an account? Log in</string>
+
+
+    <string-array name="country">
+        <item>Select country</item>
+        <item>Nepal</item>
+        <item>India</item>
+        <item>Pakistan</item>
+
+    </string-array>
+
+    <string name="navigation_drawer_open">Open</string>
+    <string name="navigation_drawer_close">Close</string>
+
+</resources>

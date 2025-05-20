@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActivityForm"
+    android:orientation="vertical">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/form_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primary"
+        app:title="BCE AP"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Registration Form"
+            android:layout_marginBottom="10dp"
+            android:textSize="28sp"/>
+        <EditText
+            android:id="@+id/edtName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:hint="Enter Name"/>
+        <EditText
+            android:id="@+id/edtAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:hint="Enter Address"/>
+        <EditText
+            android:id="@+id/edtEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:hint="Enter Email"/>
+        <RadioGroup
+            android:id="@+id/rGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <RadioButton
+                android:id="@+id/rdMale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Male"/>
+            <RadioButton
+                android:id="@+id/rdFemale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Female"/>
+
+        </RadioGroup>
+        <Spinner
+            android:id="@+id/spCountry"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/country"/>
+        <CheckBox
+            android:id="@+id/cbTerms"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="I accept all terms and conditions"/>
+        <Button
+            android:id="@+id/btnSubmit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Submit"/>
+        <TextView
+            android:id="@+id/tvResultName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="nameResult:"
+            android:textSize="18sp"/>
+        <TextView
+            android:id="@+id/tvResultAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="addressResult:"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/tvResultEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="emailResult:"
+            android:textSize="18sp"/>
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
