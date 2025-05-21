@@ -11,21 +11,29 @@
         android:roundIcon="@drawable/logo_smart_invoice"
         android:supportsRtl="true"
         android:theme="@style/Theme.BCE7">
+
         <activity
             android:name=".resultActivity"
             android:exported="false" />
         <activity
             android:name=".ActivityForm"
             android:exported="false" />
+
         <activity
             android:name=".MainActivity"
+            android:exported="true" />
+
+        <activity
+            android:name=".SplashScreen"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+
+
     </application>
 
 </manifest>
