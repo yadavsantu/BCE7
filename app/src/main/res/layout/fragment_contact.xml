@@ -64,7 +64,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="santu@example.com"
+                    android:text="santuyadav732@gmail.com"
                     android:textSize="16sp"
                     android:layout_marginStart="12dp" />
             </LinearLayout>
@@ -91,7 +91,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="+977-9812345678"
+                    android:text="+977-9765220680"
                     android:textSize="16sp"
                     android:layout_marginStart="12dp" />
             </LinearLayout>
