@@ -22,9 +22,6 @@ class ActivityForm : AppCompatActivity() {
         //code to display status bar and back button
         val toolbar=findViewById<androidx.appcompat.widget.Toolbar>(R.id.form_toolbar)
         val btnRegister=findViewById<Button>(R.id.btnSubmit)
-        val txtResultName=findViewById<TextView>(R.id.tvResultName)
-        val txtResultEmail=findViewById<TextView>(R.id.tvResultEmail)
-        val txtResultAddress=findViewById<TextView>(R.id.tvResultAddress)
 
         val name=findViewById<EditText>(R.id.edtName)
         val address=findViewById<EditText>(R.id.edtAddress)

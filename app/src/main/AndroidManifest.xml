@@ -21,10 +21,10 @@
             android:name=".ActivityForm"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".PersonActivity"
             android:exported="true" />
         <activity
-            android:name=".PersonActivity"
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
