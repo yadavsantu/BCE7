@@ -19,6 +19,7 @@ class resultActivity : AppCompatActivity() {
         val country = intent.getStringExtra("country")
         val terms = intent.getStringExtra("terms")
 
+
         // Set text on each individual TextView
         findViewById<TextView>(R.id.tvResultName).text = "Name: $name"
         findViewById<TextView>(R.id.tvResultAddress).text = "Address: $address"

@@ -1,6 +1,7 @@
 package com.mobile.bce7
 
 import android.annotation.SuppressLint
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.util.Patterns
@@ -12,8 +13,19 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import com.google.android.material.navigation.NavigationView
+import java.util.Locale
 
 class MainActivity : AppCompatActivity() {
+    override fun attachBaseContext(newBase: Context?) {
+        val sharedPreferences= newBase?.getSharedPreferences("Settings", Context.MODE_PRIVATE)
+
+        val lang= sharedPreferences?.getString("My_Lang", "en")?:"en"
+        val locale = Locale(lang)
+        val config = newBase?.resources?.configuration
+        config?.setLocale((locale))
+        val context=newBase?.createConfigurationContext(config!!)
+        super.attachBaseContext(context)
+    }
 
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {

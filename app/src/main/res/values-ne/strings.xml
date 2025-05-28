@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">BCE7</string>
+    <string name="app_name">बि सी इ ७</string>
     <string name="first_text">This is my Application</string>
     <string name="second_text">This is subtitle</string>
     <string name="button1">Click Me</string>
@@ -19,15 +19,15 @@
     <string name="confirmPassword">Confirm Password</string>
     <string name="redirect">Already have an account? Log in</string>
 
-    <string name="home_title">Student Management</string>
-    <string name="greetings">Namaste Santu</string>
+    <string name="home_title">विद्यार्थी व्यवस्थापन</string>
+    <string name="greetings">नमस्ते, सन्तु</string>
 
 
     <string-array name="country">
-        <item>Select country</item>
-        <item>Nepal</item>
-        <item>India</item>
-        <item>Pakistan</item>
+        <item>देश चयन गर्नुहोस्</item>
+        <item>नेपाल</item>
+        <item>भारत</item>
+        <item>पाकिस्तान</item>
 
     </string-array>
 
