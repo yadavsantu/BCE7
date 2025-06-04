@@ -1,5 +1,6 @@
 package com.mobile.bce7
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
@@ -13,9 +14,11 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import database.MyDatabaseHelper
 
 @Suppress("DEPRECATION")
 class ActivityForm : AppCompatActivity() {
+    @SuppressLint("SuspiciousIndentation")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_form)
@@ -49,17 +52,30 @@ class ActivityForm : AppCompatActivity() {
             val countryText=country.selectedItem.toString()
             val acceptedTerms=terms.isChecked.toString()
 
+            val dbHelper= MyDatabaseHelper(this)
+            dbHelper.insertUserData(
+                name=nameData,
+                addressData,
+                emailData,
+                genderText,
+                countryText,
+                terms=acceptedTerms
+            )
+            val intent= Intent(this, resultActivity::class.java)
+            startActivity(intent)
 
-            val intent= Intent(this, resultActivity::class.java).apply {
-                putExtra("name", nameData)
-                putExtra("address",addressData)
-                putExtra("email",emailData)
-                putExtra("gender",genderText)
-                putExtra("country",countryText)
-                putExtra("terms",acceptedTerms)
+
+//
+//            val intent= Intent(this, resultActivity::class.java).apply {
+//                putExtra("name", nameData)
+//                putExtra("address",addressData)
+//                putExtra("email",emailData)
+//                putExtra("gender",genderText)
+//                putExtra("country",countryText)
+//                putExtra("terms",acceptedTerms)
 
             }
-            startActivity(intent)
+
 
             //txtResultName.setText("Name :"+nameData+",Country:"+countryText )
            // txtResultAddress.setText( "Address:"+addressData+",Gender:"+genderText)
@@ -67,4 +83,3 @@ class ActivityForm : AppCompatActivity() {
         }
 
     }
-}
