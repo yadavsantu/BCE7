@@ -57,6 +57,11 @@ class MainActivity : AppCompatActivity() {
                    supportFragmentManager.beginTransaction()
                         .replace(R.id.fragment_container, Home()).commit()
                 }
+                R.id.nav_products->{
+                    supportFragmentManager.beginTransaction()
+                        .replace(R.id.fragment_container, Products()).commit()
+                }
+
                 R.id.nav_about -> {
                     supportFragmentManager.beginTransaction()
                         .replace(R.id.fragment_container, About()).commit()

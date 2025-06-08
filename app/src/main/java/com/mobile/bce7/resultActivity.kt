@@ -35,6 +35,7 @@ class resultActivity : AppCompatActivity() {
         cursor.close()
         // se up a listview or recycler to show userlist
         val listview= findViewById<ListView>(R.id.listViewUsers)
+
         val adapter= ArrayAdapter(this, android.R.layout.simple_list_item_1, userList)
         listview.adapter= adapter
 

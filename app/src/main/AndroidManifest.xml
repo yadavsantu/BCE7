@@ -13,10 +13,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BCE7">
         <activity
-            android:name=".MainActivity"
+            android:name=".ProductActivity"
             android:exported="false" />
         <activity
-            android:name=".SplashScreen"
+            android:name=".MainActivity"
             android:exported="false" />
         <activity
             android:name=".resultActivity"
@@ -28,7 +28,7 @@
             android:name=".PersonActivity"
             android:exported="false" />
         <activity
-            android:name=".ProductActivity"
+            android:name=".SplashScreen"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
