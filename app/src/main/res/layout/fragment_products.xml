@@ -3,10 +3,25 @@
     android:id="@+id/productsFragmentLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/productRecyclerView"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <Button
+            android:id="@+id/postProduct"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add Product"
+            />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/productRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+
+
+
+
 </FrameLayout>
