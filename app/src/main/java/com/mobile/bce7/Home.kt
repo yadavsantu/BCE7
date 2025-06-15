@@ -36,6 +36,7 @@ class Home : Fragment() {
         btnSignup.setOnClickListener {
             val intent = Intent(requireContext(), ActivityForm::class.java)
             startActivity(intent)
+            requireActivity().overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
         }
 
 

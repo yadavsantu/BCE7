@@ -38,6 +38,7 @@ class Products : Fragment() {
             postProducts() // ✅ Only call when button is clicked
         }
 
+
         fetchProducts()
 
 
@@ -96,4 +97,5 @@ class Products : Fragment() {
             }
         })
     }
+
 }
