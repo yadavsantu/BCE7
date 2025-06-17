@@ -8,7 +8,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.Toast
 import java.util.Locale
+import kotlin.concurrent.thread
 
 class Home : Fragment() {
 
@@ -26,10 +28,24 @@ class Home : Fragment() {
         val btnEnglish=view.findViewById<Button>(R.id.btnEnglish)
         val btnNepali=view.findViewById<Button>(R.id.btnNepali)
 
+
+        val thread= Thread{
+            Thread.sleep(7000)
+            requireActivity().runOnUiThread {
+                Toast.makeText(requireContext(),"Task Completed",Toast.LENGTH_SHORT).show()
+
+            }
+        }
+        thread.start()
+
+
+
         // Open PersonActivity when Person List button is clicked
         btnPersonList.setOnClickListener {
             val intent = Intent(requireContext(), PersonActivity::class.java)
+            requireActivity().overridePendingTransition(R.anim.fade_in, R.anim.fade_out)
             startActivity(intent)
+
         }
 
         // Open ActivityForm when Signup button is clicked
@@ -40,14 +56,20 @@ class Home : Fragment() {
         }
 
 
+
         // translate to nepali
         btnNepali.setOnClickListener {
             setLanguage("ne")
+            val intent= Intent(requireContext(), MyService::class.java)
+            requireContext().stopService(intent)
 
         }
         // translate to english
         btnEnglish.setOnClickListener {
             setLanguage("en")
+            //Start service
+            val intent= Intent(requireContext(), MyService::class.java)
+            requireContext().startService(intent)
 
         }
 
@@ -72,3 +94,5 @@ class Home : Fragment() {
         requireActivity().recreate()
     }
 }
+
+

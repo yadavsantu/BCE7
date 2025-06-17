@@ -15,6 +15,9 @@
         <activity
             android:name=".ProductActivity"
             android:exported="false" />
+        <service
+            android:name=".MyService"
+            android:exported="false"/>
         <activity
             android:name=".MainActivity"
             android:exported="false" />
